@@ -1,0 +1,176 @@
+/* Step 1 */
+@keyframes myMove {
+    from {
+        width: 25px;
+        opacity: 0;
+    }
+    to {
+        width: 475px;
+        opacity: 1;
+    }
+}
+
+#logo {
+    animation: myMove 5s ease-in-out forwards;
+}
+
+/* step 2 */
+body{
+    font-family: "Poppins", serif;
+    background-image: url("../images/concrete_seamless.png");
+    background-color: #f1f1f1;
+}
+
+/* step 3 */
+header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* step 4 */
+.nav_links{
+    display:flex;
+    flex-direction: column;
+}
+
+/* step 5 */
+/* .nav_links a {
+    color: inherit;
+    text-decoration: none;
+} */
+
+.nav_links a:visited {
+    color: #0000ee;
+}
+
+/* step 6 */
+.card > header{
+    background: #288088;
+    border:solid 2px #45ADAD;
+    padding:20px 0;
+    /* border-radius:50px; */
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    margin: 0;
+}
+
+/* step 7 */
+.card {
+    flex: 1 1 450px;
+}
+
+/* step 8 */
+.pricing {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 450px;
+}
+
+/* step 9 */
+.gallery img {
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+}
+
+/* step 10 */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+@media (min-width: 900px) {
+    /* step 11 */
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    /* step 11 */
+    .nav_links {
+        flex-direction: row;
+    }
+    /* step 12 */
+    .pricing {
+        /* display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap; */
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: nowrap;
+        margin: auto;
+        width: auto;
+    }
+    /* step 12 -> come back to this */
+    .card {
+        flex: 0 1 275px;
+    }
+
+}
+
+/* step 13 - not sure how to do this */
+
+
+/* step 14 */
+@media (prefers-reduced-motion: reduce) {
+    #logo {
+        animation: none; 
+    }
+}
+
+@media print {
+    /* I was unable to view the print layout on my pc for some reason. 
+    I had to view as pdf to see the changes but I don't think pdf view
+    reflected my changes correctly so it was hard to tell if I did this right*/
+
+    /* step 15 and 16 */
+    body {
+        font-family: Arial, Helvetica;
+        background: none;
+    }
+    /* step 17 */
+    .nav_links {
+        display:flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+    }
+    /* step 18 */
+    .pricing {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        flex-direction: row;
+        gap: 20px;
+        flex-wrap: nowrap;
+        margin: auto;
+        width: auto;
+    }
+    /* step 19 */
+    .card {
+        border: 2px solid #45ADDD;
+        flex-basis: 325px;
+    }
+    /* step 20  */
+    .gallery {
+        display: none;
+    }
+
+    .card ul li:nth-child(2)::after {
+        content: "\1F44D"; /* Thumbs up emoji */
+        margin-right: 5px;
+    }
+}
+
