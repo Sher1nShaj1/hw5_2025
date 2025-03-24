@@ -1,4 +1,4 @@
-/* Step 1 */
+/* Step 1 handles the logo animation */
 @keyframes myMove {
     from {
         width: 25px;
@@ -14,27 +14,27 @@
     animation: myMove 5s ease-in-out forwards;
 }
 
-/* step 2 */
+/* step 2 styles the body of the page */
 body{
     font-family: "Poppins", serif;
     background-image: url("../images/concrete_seamless.png");
     background-color: #f1f1f1;
 }
 
-/* step 3 */
+/* step 3 styles the header of the pages*/
 header{
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-/* step 4 */
+/* step 4 styles the positioning of the links*/
 .nav_links{
     display:flex;
     flex-direction: column;
 }
 
-/* step 5 */
+/* step 5 styles the links to be same color even after clicking*/
 /* .nav_links a {
     color: inherit;
     text-decoration: none;
@@ -44,7 +44,7 @@ header{
     color: #0000ee;
 }
 
-/* step 6 */
+/* step 6 styles the header of the card a background color, solid border and rounded corners */
 .card > header{
     background: #288088;
     border:solid 2px #45ADAD;
@@ -55,12 +55,12 @@ header{
     margin: 0;
 }
 
-/* step 7 */
+/* step 7 expand, shrink and default size*/
 .card {
     flex: 1 1 450px;
 }
 
-/* step 8 */
+/* step 8 aligns everything at the center with flexible and responsive layout */
 .pricing {
     display: flex;
     justify-content: center;
@@ -72,14 +72,14 @@ header{
     width: 450px;
 }
 
-/* step 9 */
+/* step 9 - border, spacing and width of gallery iamge */
 .gallery img {
     border: 10px solid #50C7C7;
     margin: 10px;
     width: 300px;
 }
 
-/* step 10 */
+/* step 10 - flexible, centered layout that wraps into new lines when there isn't enough space*/
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -88,18 +88,18 @@ header{
 
 
 @media (min-width: 900px) {
-    /* step 11 */
+    /* step 11 - header elements arranged in a row, spaced out evenly and vertically centered*/
     header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
-    /* step 11 */
+    /* step 11 - in this view, links will be in row format */
     .nav_links {
         flex-direction: row;
     }
-    /* step 12 */
+    /* step 12 - in this view prcing elements will be in a row */
     .pricing {
         /* display: flex;
         flex-direction: row;
@@ -113,7 +113,7 @@ header{
         margin: auto;
         width: auto;
     }
-    /* step 12 -> come back to this */
+    /* step 12 card can shrink but not grow-> come back to this */
     .card {
         flex: 0 1 275px;
     }
@@ -123,7 +123,7 @@ header{
 /* step 13 - not sure how to do this */
 
 
-/* step 14 */
+/* step 14 - for users who prefer reduced motion animation for logo is disabled  */
 @media (prefers-reduced-motion: reduce) {
     #logo {
         animation: none; 
@@ -131,16 +131,16 @@ header{
 }
 
 @media print {
-    /* I was unable to view the print layout on my pc for some reason. 
+    /*Styles specifically for printing -  I was unable to view the print layout on my pc for some reason. 
     I had to view as pdf to see the changes but I don't think pdf view
     reflected my changes correctly so it was hard to tell if I did this right*/
 
-    /* step 15 and 16 */
+    /* step 15 and 16 - updated font */
     body {
         font-family: Arial, Helvetica;
         background: none;
     }
-    /* step 17 */
+    /* step 17 - horizontal links */
     .nav_links {
         display:flex;
         justify-content: space-between;
@@ -158,16 +158,17 @@ header{
         margin: auto;
         width: auto;
     }
-    /* step 19 */
+    /* step 19 - solid border around card with base size*/
     .card {
         border: 2px solid #45ADDD;
         flex-basis: 325px;
     }
-    /* step 20  */
+    /* step 20 - don't display anything */
     .gallery {
         display: none;
     }
 
+    /* adds a thumbs up emoji after second list item */
     .card ul li:nth-child(2)::after {
         content: "\1F44D"; /* Thumbs up emoji */
         margin-right: 5px;
